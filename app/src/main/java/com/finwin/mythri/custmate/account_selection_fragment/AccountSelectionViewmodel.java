@@ -115,6 +115,7 @@ public class AccountSelectionViewmodel extends AndroidViewModel implements Obser
         acountNumberSelected.set(ConstantClass.listAccountNumbers.get(position));
         binding.tvAcAccNo.setText(listAccountNumbers.get(position));
         editor.putString(ConstantClass.accountNumber,ConstantClass.listAccountNumbers.get(position));
+        editor.putString(ConstantClass.SCHEME,ConstantClass.listScheme.get(position));
         editor.commit();
 //        ConstantClass.const_accountNumber=listAccountNumbers.get(position);
         initLoading(view.getContext());

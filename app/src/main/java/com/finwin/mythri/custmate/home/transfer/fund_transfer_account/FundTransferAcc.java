@@ -80,18 +80,6 @@ public class FundTransferAcc extends Fragment {
 
         viewmodel.getAccountHolder();
 
-
-//        BtnVerify.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (EDTaccno.getText().toString().equals("")) {
-//                    Toast.makeText(getActivity(), "Please Enter Credit Account Number", Toast.LENGTH_LONG).show();
-//                } else {
-//                    getCreditAccountHolderr(EDTaccno.getText().toString());
-//                }
-//            }
-//        });
-
         binding.ibtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,32 +87,17 @@ public class FundTransferAcc extends Fragment {
                 getFragmentManager().popBackStack();
             }
         });
-
-//        BtnProceed = rootview.findViewById(R.id.btn_proceed);
-//        BtnProceed.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (EDTamount.getText().toString().equals("")) {
-//                    Toast.makeText(getActivity(), "Please Enter Amount", Toast.LENGTH_LONG).show();
-//                } else {
-//                    verifyMpin(getActivity());
-//                }
-//            }
-//        });
-
+        viewmodel.reset();
         return binding.getRoot();
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        String success= sharedPreferences.getString("success","");
-        if (success.equals("yes"))
-        {
-            viewmodel.reset();
-        }
-    }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        if (viewmodel!=null){
+//            viewmodel.reset();}
+//
+//    }
 
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {

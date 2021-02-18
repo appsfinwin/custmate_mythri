@@ -64,6 +64,7 @@ public class AccountViewmodel extends AndroidViewModel implements Observable {
     }
     public void onSelectedAccountNumber(AdapterView<?> parent, View view, int position, long id)
     {
+        editor.putString(ConstantClass.SCHEME,ConstantClass.listScheme.get(position));
         editor.putString(ConstantClass.accountNumber,ConstantClass.listAccountNumbers.get(position));
         editor.commit();
         //ConstantClass.const_accountNumber = ConstantClass.listAccountNumbers.get(position);

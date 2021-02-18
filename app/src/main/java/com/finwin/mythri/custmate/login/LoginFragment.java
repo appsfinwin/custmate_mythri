@@ -127,10 +127,6 @@ public class LoginFragment extends Fragment {
                         editor.putBoolean(ConstantClass.mpinStatus, loginAction.getLoginResponse().getUser().getData().getMPINstatus());
                         editor.commit();
 
-
-//                        ConstantClass.const_name = loginAction.getLoginResponse().getUser().getData().getUSERNAME();
-//                        ConstantClass.const_phone = loginAction.getLoginResponse().getUser().getData().getMOBILENO();
-//                        ConstantClass.const_cusId =loginAction.getLoginResponse().getUser().getData().getUSERID();
                         ConstantClass.listAccountNumbers=new ArrayList<>();
                         ConstantClass.listAccountNumbers.clear();
                         ConstantClass.listScheme=new ArrayList<>();

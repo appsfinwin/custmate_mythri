@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentActivity;
 
 import com.finwin.mythri.custmate.R;
+import com.finwin.mythri.custmate.activity_main.ActivityMain;
 
 
 public class FundTransferReceipt extends FragmentActivity {
@@ -77,8 +78,10 @@ public class FundTransferReceipt extends FragmentActivity {
         BtnOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editor.putString("success","yes");
-                editor.commit();
+//                editor.putString("success","yes");
+//                editor.commit();
+
+                startActivity(new Intent(FundTransferReceipt.this, ActivityMain.class));
                 finish();
             }
         });
