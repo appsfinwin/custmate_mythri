@@ -157,6 +157,12 @@ public class NeftImpsFragment extends Fragment {
                     case NeftAction.CLICK_PROCEED:
                         verifyMpin();
                         break;
+                        case NeftAction.API_ERROR:
+                            if (beneficiaryLoading!=null)
+                            {
+                                beneficiaryLoading.dismiss();
+                            }
+                        break;
                 }
             }
         });
@@ -216,7 +222,7 @@ public class NeftImpsFragment extends Fragment {
         Map<String, String> params = new HashMap<>();
         Map<String, String> items = new HashMap<>();
         items.put("customer_id",
-                sharedPreferences.getString(ConstantClass.accountNumber,""));
+                sharedPreferences.getString(ConstantClass.custId,""));
         items.put("ben_name", "");
         items.put("ben_mobile", "");
         items.put("ben_account_no", "");
